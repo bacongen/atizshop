@@ -1,0 +1,319 @@
+/* Thiết lập chung */
+body {
+    /* để cho không bị viền trắng trong trang web */
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* dể cho link không có gạch chân ở dưới */
+a {
+    text-decoration: none;
+}
+
+/* --- PHẦN ĐẦU TRANG (HEADER) --- */
+.dau-trang {
+    width: 100%;
+    /* Tăng chiều cao lên để chứa đủ 2 dòng (70px -> 120px hoặc 140px) */
+    height: 80px;
+
+    display: flex;
+
+    /*Xếp các phần tử con (hàng trên, thanh tìm kiếm) theo chiều dọc */
+    flex-direction: column;
+
+    /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center;
+
+    background-color: rgb(9, 9, 43);
+    position: fixed;
+    z-index: 1000;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hang-tren {
+    width: 100%;
+    /* Chiếm hết chiều ngang */
+    display: flex;
+    /* Để các nút bên trong xếp hàng ngang như cũ */
+    align-items: center;
+    /* Căn giữa các nút */
+    margin-bottom: 10px;
+    /* Tạo khoảng cách với thanh tìm kiếm bên dưới */
+}
+
+/* chữ My Shop */
+.tieu-de-shop {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+/* các nút menu  */
+.nut-menu {
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    /* để cho cái border hiện lên, 1 px là độ dày */
+    border-radius: 5px;
+    /* bo tròn border */
+    color: white;
+    cursor: pointer;
+    /* cho cái nút chuột đổi hình thành hình bấm  */
+    transition: 0.3s ease;
+    /* cho hover mượt hơn, ease có nghĩa là bắt đầu chậm và nhanh dần  */
+}
+
+/* hover của cái nút menu, thay đổi hiệu ứng khi di chuột lên */
+.nut-menu:hover {
+    background-color: rgb(173, 173, 244);
+    color: rgb(9, 9, 43);
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+.khung-tim-kiem {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    /* Giảm chiều cao chút cho gọn */
+
+    /* Canh giữa thanh tìm kiếm */
+    width: fit-content;
+    /* Chỉ rộng bằng nội dung bên trong */
+    margin: 0 auto;
+    /* margin auto trái phải để căn giữa màn hình */
+
+    border: 1px solid white;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    /* Thêm nền trắng nếu muốn */
+    margin-bottom: 5px;
+}
+
+.o-nhap-tim-kiem {
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    /* Bỏ viền khi click vào */
+    font-size: 14px;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.nut-tim-kiem {
+    height: 100%;
+    width: 60px;
+    background-color: rgb(77, 77, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nut-tim-kiem:hover {
+    background-color: rgb(155, 155, 255);
+}
+
+/* Áp dụng các quy tắc này khi độ rộng màn hình TỐI ĐA là 768px trở xuống */
+@media (max-width: 768px) {
+    .dau-trang {
+        padding: 0 5px;
+    }
+
+    .tieu-de-shop {
+        font-size: 15px;
+        margin: 0 0;
+    }
+
+    .nut-menu {
+        transform: scale(0.9);
+        margin: 0 0;
+    }
+
+    .o-nhap-tim-kiem {
+        width: 200px;
+     }
+
+    .the-san-pham {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    .danh-sach-san-pham {
+        justify-content: center;
+        /* Đảm bảo các thẻ sản phẩm 80% được căn giữa */
+    }
+}
+
+/* --- PHẦN NỘI DUNG CHÍNH --- */
+.noi-dung-chinh {
+    padding-top: 100px;
+    /* Để không bị menu che mất */
+    min-height: 80vh;
+    /* Đảm bảo trang luôn đủ dài */
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Banner quảng cáo lớn */
+.banner-quang-cao {
+    background-color: skyblue;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Lưới sản phẩm (Dùng Flexbox) */
+.danh-sach-san-pham {
+    display: flex;
+    flex-wrap: wrap;
+    /* Tự xuống dòng nếu hết chỗ */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.the-san-pham {
+    background-color: white;
+    width: 23%;
+    /* Mỗi hàng 4 sản phẩm */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.2s;
+    margin-bottom: 20px;
+}
+
+.the-san-pham:hover {
+    transform: scale(1.03);
+    /* Phóng to nhẹ khi di chuột */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.anh-san-pham {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    object-fit: cover;
+}
+
+.thong-tin-san-pham {
+    padding: 15px;
+    text-align: center;
+}
+
+.ten-san-pham {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.gia-tien {
+    color: red;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.nut-mua-hang {
+    background-color: rgb(9, 9, 43);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nut-mua-hang:hover {
+    background-color: rgb(77, 77, 255);
+}
+
+.day-sang-phai {
+    /* Trong Flexbox, margin-left: auto sẽ đẩy phần tử 
+       và tất cả các phần tử sau nó về phía bên phải tận cùng */
+    margin-left: auto;
+}
+
+
+
+/* --- TRANG ĐĂNG NHẬP --- */
+.khung-dang-nhap-bao-ngoai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f0f8ff;
+}
+
+.hop-dang-nhap {
+    background-color: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.o-nhap-lieu {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.nut-dang-nhap {
+    width: 100%;
+    height: 45px;
+    background-color: rgb(77, 77, 255);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.nut-dang-nhap:hover {
+    background-color: rgb(40, 40, 200);
+}
+
+/* --- CHÂN TRANG --- */
+.chan-trang {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.cot-chan-trang h4 {
+    color: rgb(0, 157, 255);
+    margin-bottom: 15px;
+}
+
+.cot-chan-trang p {
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.cot-chan-trang p:hover {
+    color: yellow;
+}
