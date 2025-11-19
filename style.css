@@ -142,16 +142,6 @@ a {
     .o-nhap-tim-kiem {
         width: 200px;
     }
-
-    .the-san-pham {
-        width: 80%;
-        margin: 0 auto 20px auto;
-    }
-
-    .danh-sach-san-pham {
-        justify-content: center;
-        /* Đảm bảo các thẻ sản phẩm 80% được căn giữa */
-    }
 }
 
 /* --- PHẦN NỘI DUNG CHÍNH --- */
@@ -200,6 +190,17 @@ a {
     /* Phóng to nhẹ khi di chuột */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    .the-san-pham {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    .danh-sach-san-pham {
+        justify-content: center;
+    }
+ }
 
 
 
