@@ -200,7 +200,7 @@ a {
     .danh-sach-san-pham {
         justify-content: center;
     }
- }
+}
 
 
 
@@ -317,4 +317,110 @@ a {
 
 .cot-chan-trang p:hover {
     color: yellow;
+}
+
+
+/* ---  POPUP  --- */
+
+/* Lớp phủ mờ toàn màn hình */
+.lop-phu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Màu đen mờ man hinh */
+    z-index: 9999;
+    /* Luôn nổi lên trên cùng */
+
+    /* Mặc định là ẩn đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    /* Căn hộp thông báo ra giữa màn hình */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* KHI POPUP ĐƯỢC KÍCH HOẠT */
+.lop-phu:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hộp nội dung bên trong popup */
+.hop-thong-bao {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    /* Hiệu ứng phóng to nhẹ khi hiện ra */
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+
+/* Khi lớp phủ hiện, hộp thông báo sẽ phóng to về kích thước chuẩn */
+.lop-phu:target .hop-thong-bao {
+    transform: scale(1);
+}
+
+/* Nút đóng chữ X */
+.nut-dong {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 30px;
+    color: gray;
+    font-weight: bold;
+}
+
+.nut-dong:hover {
+    color: red;
+}
+
+/* Nút xác nhận mua */
+.nut-xac-nhan-mua {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.nut-xac-nhan-mua:hover {
+    background-color: darkred;
+    box-shadow: 0 2px 5px gray;
+}
+
+/* Nút đóng lại ở popup thành công */
+.nut-dong-lai {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.chon-so-luong {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.mo-ta-ngan {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
 }

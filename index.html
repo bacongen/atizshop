@@ -11,14 +11,14 @@
 <body>
     <!-- phần 1: thanh đầu trang web -->
     <div class="dau-trang">
-        
+
         <div class="hang-tren">
             <div class="tieu-de-shop">ATIZ SHOP</div>
             <a href="index.html"><button class="nut-menu">Trang Chủ</button></a>
             <a href="sanpham.html"><button class="nut-menu">Sản Phẩm</button></a>
             <a href="#"><button class="nut-menu">Giới Thiệu</button></a>
             <a href="#"><button class="nut-menu">Liên Hệ</button></a>
-            
+
             <a href="dangnhap.html" class="day-sang-phai"><button class="nut-menu">Đăng Nhập</button></a>
         </div>
 
@@ -35,19 +35,20 @@
             <h1>Chào mừng đến với ATIZ SHOP</h1>
             <p>Nơi cung cấp các gói dịch vụ ATIZ siêu xịn xò</p>
             <p>sản phẩm của nhóm 3</p>
-        <p> các thành viên gồm có : Nhã Chi, Thùy Linh, Đức Anh, Hải Long, Tuấn Minh</p>
+            <p> các thành viên gồm có : Nhã Chi, Thùy Linh, Đức Anh, Hải Long, Tuấn Minh</p>
         </div>
         <!-- list các sản phẩm nổi bật  -->
         <h2 style="color: rgb(9, 9, 43); border-bottom: 2px solid rgb(9, 9, 43); padding-bottom: 10px;">Sản Phẩm Nổi Bật
         </h2>
-
+        <!-- danh sach san pham  -->
         <div class="danh-sach-san-pham">
             <div class="the-san-pham">
                 <img src="download.jpg" alt="Laptop" class="anh-san-pham">
                 <div class="thong-tin-san-pham">
                     <div class="ten-san-pham">câu béo</div>
                     <span class="gia-tien">100.000 đ</span>
-                    <button class="nut-mua-hang">Mua Ngay</button>
+                    <a href="#popup-mua-hang1" class="nut-mua-hang"
+                        style="text-decoration: none; display: inline-block;">Mua Ngay</a>
                 </div>
             </div>
 
@@ -56,7 +57,8 @@
                 <div class="thong-tin-san-pham">
                     <div class="ten-san-pham">leak đề hóa của phương</div>
                     <span class="gia-tien">10.000 đ</span>
-                    <button class="nut-mua-hang">Mua Ngay</button>
+                    <a href="#popup-mua-hang2" class="nut-mua-hang"
+                        style="text-decoration: none; display: inline-block;">Mua Ngay</a>
                 </div>
             </div>
 
@@ -65,7 +67,8 @@
                 <div class="thong-tin-san-pham">
                     <div class="ten-san-pham">tuan minh</div>
                     <span class="gia-tien">FREE</span>
-                    <button class="nut-mua-hang">Mua Ngay</button>
+                    <a href="#popup-mua-hang3" class="nut-mua-hang"
+                        style="text-decoration: none; display: inline-block;">Mua Ngay</a>
                 </div>
             </div>
 
@@ -74,14 +77,111 @@
                 <div class="thong-tin-san-pham">
                     <div class="ten-san-pham">passroyal</div>
                     <span class="gia-tien">50.000 đ</span>
-                    <button class="nut-mua-hang">Mua Ngay</button>
+                    <a href="#popup-mua-hang4" class="nut-mua-hang"
+                        style="text-decoration: none; display: inline-block;">Mua Ngay</a>
                 </div>
             </div>
         </div>
         <div class="banner-quang-cao">
-<a href="bachkhoa.html"> <button class="nut-dang-nhap">shop của đức anh</button></a>
+            <a href="bachkhoa.html"> <button class="nut-dang-nhap">shop của đức anh</button></a>
         </div>
     </div>
+    <!-- pop up cho danh sach san pham  -->
+    <div>
+        <!-- sp1 -->
+        <div id="popup-mua-hang1" class="lop-phu">
+            <div class="hop-thong-bao">
+                <a href="#" class="nut-dong">&times;</a>
+
+                <h2 style="color: rgb(9, 9, 43);">Xác Nhận Mua Hàng</h2>
+
+                <div class="noi-dung-popup">
+                    <p><strong>Sản phẩm:</strong> câu béo</p>
+                    <p class="mo-ta-ngan">Mô tả: dụ kiên và thiêm</p>
+
+                    <div class="chon-so-luong">
+                        <label>Số lượng:</label>
+                        <input type="number" value="1" min="1" max="10" style="width: 50px; padding: 5px;">
+                    </div>
+                </div>
+
+                <a href="#popup-thanh-cong" class="nut-xac-nhan-mua">Xác Nhận Đặt Hàng</a>
+            </div>
+        </div>
+        <!-- sp2 -->
+        <div id="popup-mua-hang2" class="lop-phu">
+            <div class="hop-thong-bao">
+                <a href="#" class="nut-dong">&times;</a>
+
+                <h2 style="color: rgb(9, 9, 43);">Xác Nhận Mua Hàng</h2>
+
+                <div class="noi-dung-popup">
+                    <p><strong>Sản phẩm:</strong> leak đề hóa của phương</p>
+                    <p class="mo-ta-ngan">Mô tả: scam đề phương</p>
+
+                    <div class="chon-so-luong">
+                        <label>Số lượng:</label>
+                        <input type="number" value="1" min="1" max="10" style="width: 50px; padding: 5px;">
+                    </div>
+                </div>
+
+                <a href="#popup-thanh-cong" class="nut-xac-nhan-mua">Xác Nhận Đặt Hàng</a>
+            </div>
+        </div>
+        <!-- sp3 -->
+        <div id="popup-mua-hang3" class="lop-phu">
+            <div class="hop-thong-bao">
+                <a href="#" class="nut-dong">&times;</a>
+
+                <h2 style="color: rgb(9, 9, 43);">Xác Nhận Mua Hàng</h2>
+
+                <div class="noi-dung-popup">
+                    <p><strong>Sản phẩm:</strong>tuan minh</p>
+                    <p class="mo-ta-ngan">Mô tả: real</p>
+
+                    <div class="chon-so-luong">
+                        <label>Số lượng:</label>
+                        <input type="number" value="1" min="1" max="10" style="width: 50px; padding: 5px;">
+                    </div>
+                </div>
+
+                <a href="#popup-thanh-cong" class="nut-xac-nhan-mua">Xác Nhận Đặt Hàng</a>
+            </div>
+        </div>
+        <!-- sp4 -->
+        <div id="popup-mua-hang4" class="lop-phu">
+            <div class="hop-thong-bao">
+                <a href="#" class="nut-dong">&times;</a>
+
+                <h2 style="color: rgb(9, 9, 43);">Xác Nhận Mua Hàng</h2>
+
+                <div class="noi-dung-popup">
+                    <p><strong>Sản phẩm:</strong> passroyale</p>
+                    <p class="mo-ta-ngan">Mô tả: real</p>
+
+                    <div class="chon-so-luong">
+                        <label>Số lượng:</label>
+                        <input type="number" value="1" min="1" max="10" style="width: 50px; padding: 5px;">
+                    </div>
+                </div>
+
+                <a href="#popup-thanh-cong" class="nut-xac-nhan-mua">Xác Nhận Đặt Hàng</a>
+            </div>
+        </div>
+        <!-- pop up thanh cong -->
+        <div id="popup-thanh-cong" class="lop-phu">
+            <div class="hop-thong-bao">
+                <a href="#" class="nut-dong">&times;</a>
+
+                <h2 style="color: green;">Thành Công!</h2>
+                <p>Bạn đã đặt hàng thành công.</p>
+                <p>Chúng tôi sẽ liên hệ sớm nhất.</p>
+
+                <a href="#" class="nut-dong-lai">Đóng</a>
+            </div>
+        </div>
+    </div>
+
     <!-- phần 3: chân trang web  -->
     <div class="chan-trang">
         <div class="cot-chan-trang">
