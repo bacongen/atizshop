@@ -168,9 +168,9 @@ a {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
-/* Lưới sản phẩm (Dùng Flexbox) */
+/* Lưới sản phẩm  */
 .danh-sach-san-pham {
-    display: flex;
+    display: flex; /* dàn hàng ngang các sản phẩm */
     flex-wrap: wrap;
     /* Tự xuống dòng nếu hết chỗ */
     justify-content: space-between;
@@ -183,8 +183,8 @@ a {
     /* Mỗi hàng 4 sản phẩm */
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: 0.2s;
+    overflow: hidden;  /* bo tròn viền ảnh */
+    transition: 0.2s; /* thời gian chạy animation khi di chuột lên */
     margin-bottom: 20px;
 }
 
