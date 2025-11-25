@@ -132,11 +132,14 @@ a {
     .tieu-de-shop {
         font-size: 15px;
         margin: 0 0;
+
     }
 
     .nut-menu {
-        transform: scale(0.9);
+        transform: scale(0.9.5);
         margin: 0 0;
+        font-size: 11px;
+        width: 70px;
     }
 
     .o-nhap-tim-kiem {
